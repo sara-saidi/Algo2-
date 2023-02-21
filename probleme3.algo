@@ -1,0 +1,16 @@
+ALGORITHM tri-insertion
+VAR
+    i,j,n,v:INTEGER;
+    tab : ARRAY_OF Integer[n];
+BEGIN
+    FOR i FROM 2 TO n STEP 1  DO
+    v:=tab[i];
+    j:=i;
+    WHILE (tab[j-1]>v) DO
+        tab[j]:=tab[j-1];
+        j:=j-1;
+
+    END_WHILE
+    tab[j]:=v;
+    END_FOR
+END
