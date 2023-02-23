@@ -1,0 +1,20 @@
+function palandrom (ch:STRING):BOOLEAN
+VAR
+    i,j:INTEGER;
+    ok:BOOLEAN;
+BEGIN
+i:=0;
+j:=ch.length-1;
+    IF (i=j) THEN
+        return(ok:=true);
+    ELSE
+        IF (ch[i]=ch[j]) THEN
+            i:=i+1;
+            j:=j-1;
+            palandrom(ch);
+
+        ELSE
+            return(ok:=false)
+        END_IF
+    END_IF
+END
